@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -21,13 +22,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 bg-bbq-red rounded-full flex items-center justify-center border-2 border-white">
-              <span className="font-display font-bold">FS</span>
-            </div>
-            <div>
-              <div className="font-display font-bold text-xl">FEEDSTORE</div>
-              <div className="text-xs text-gray-400">BBQ & MORE</div>
-            </div>
+            <Image src="/img/feedstore-logo.png" alt="FeedStore Logo" height={200} width={200} />
           </div>
           <p className="text-gray-400 text-sm">
             456 BBQ Lane, Dallas TX 75201 USA
