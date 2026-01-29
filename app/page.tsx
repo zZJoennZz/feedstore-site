@@ -203,7 +203,7 @@ export default function Home() {
               <h2 className="font-display text-6xl font-bold text-bbq-dark">MENU</h2>
               <div className="h-1 w-24 bg-bbq-red mt-2" />
             </div>
-            <button className="border-2 border-bbq-dark px-6 py-2 font-display font-bold hover:bg-bbq-dark hover:text-white transition rounded">
+            <button className="border-2 text-bbq-dark border-bbq-dark px-6 py-2 font-display font-bold hover:bg-bbq-dark hover:text-white transition rounded">
               VIEW FULL MENU
             </button>
           </div>
