@@ -68,8 +68,11 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+        </div>
 
-          <h4 className="font-display font-bold text-lg mb-4 text-gray-300 mt-5">CONNECT</h4>
+        {/* Connect */}
+        <div>
+          <h4 className="font-display font-bold text-lg mb-4 text-gray-300">CONNECT</h4>
           <ul className="space-y-2 text-gray-400 text-sm">
             {socialLinks.map((link) => (
               <li key={link.label}>
@@ -82,14 +85,28 @@ export default function Footer() {
         </div>
 
         {/* Newsletter Form */}
-        <div className="col-span-2">
+        <div>
           <h4 className="font-display font-bold text-lg mb-4 text-gray-300">STAY SMOKIN'</h4>
           <div ref={formRef} className="w-full min-h-[200px]" />
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} Feedstore BBQ. All rights reserved.
+      {/* Bottom Bar */}
+      <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-gray-800">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} Feedstore BBQ. All rights reserved.</p>
+
+          <Link href="https://selphmarketing.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group">
+            <span className="text-gray-500 text-sm group-hover:text-gray-300 transition">Created by</span>
+            <Image
+              src="/img/Selph_Marketing_Logo_Transparent.png"
+              alt="Selph Marketing"
+              width={270}
+              height={103}
+              className="h-8 w-auto opacity-70 group-hover:opacity-100 transition bg-white rounded-md"
+            />
+          </Link>
+        </div>
       </div>
     </footer>
   );
