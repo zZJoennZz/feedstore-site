@@ -1,7 +1,12 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 
 export default function Footer() {
+  const formRef = useRef<HTMLDivElement>(null);
+
   const quickLinks = [
     { href: '#', label: 'Our Story' },
     { href: '#', label: 'Menu' },
@@ -15,6 +20,24 @@ export default function Footer() {
     { href: '#', label: 'Twitter' },
     { href: '#', label: 'Yelp' },
   ];
+
+  useEffect(() => {
+    const container = formRef.current;
+    if (!container) return;
+
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://form.jotform.com/jsform/260194430039048';
+    script.async = true;
+
+    container.appendChild(script);
+
+    return () => {
+      if (container) {
+        container.innerHTML = '';
+      }
+    };
+  }, []);
 
   return (
     <footer className="bg-black text-white py-16 border-t-4 border-bbq-red">
@@ -45,11 +68,8 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
 
-        {/* Connect */}
-        <div>
-          <h4 className="font-display font-bold text-lg mb-4 text-gray-300">CONNECT</h4>
+          <h4 className="font-display font-bold text-lg mb-4 text-gray-300 mt-5">CONNECT</h4>
           <ul className="space-y-2 text-gray-400 text-sm">
             {socialLinks.map((link) => (
               <li key={link.label}>
@@ -61,11 +81,10 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Image */}
-        <div className="relative">
-          <div className="w-full h-48 bg-neutral-800 rounded overflow-hidden">
-            <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1601645191163-3fc0d5d64e35?w=300&h=300&fit=crop')] bg-cover bg-center opacity-60" />
-          </div>
+        {/* Newsletter Form */}
+        <div className="col-span-2">
+          <h4 className="font-display font-bold text-lg mb-4 text-gray-300">STAY SMOKIN'</h4>
+          <div ref={formRef} className="w-full min-h-[200px]" />
         </div>
       </div>
 
