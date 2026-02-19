@@ -18,7 +18,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '#menu', label: 'Our Menu' },
+    { href: '/menu', label: 'Menu' },
     { href: '/#events', label: 'Events Calendar' },
     { href: '/about-us', label: 'About Us' },
   ];
@@ -27,11 +27,11 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 text-white ${isScrolled ? 'nav-solid' : 'nav-blur'}`}>
       <div className={`max-w-7xl mx-auto px-4 flex justify-between items-center transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
         {/* Logo - Now with dynamic sizing */}
-        <Link href="/" className="flex items-center">
+        <a href="/" className="flex items-center">
           <div className={`relative transition-all duration-300 ${isScrolled ? 'w-[80px] h-[80px]' : 'w-[200px] h-[200px]'}`}>
             <Image src="/img/feedstore-logo.png" alt="FeedStore Logo" fill className="object-contain" priority />
           </div>
-        </Link>
+        </a>
 
         {/* Mobile Menu Button */}
         <button
@@ -58,7 +58,9 @@ export default function Navbar() {
           <a href="/catering" className="bg-bbq-red px-6 py-2 font-bold hover:bg-red-700 transition rounded shadow-lg cursor-pointer">
             Catering
           </a>
-          <a className="bg-bbq-red px-6 py-2 font-bold hover:bg-red-700 transition rounded shadow-lg cursor-pointer">Contact</a>
+          <a href="/#contact" className="bg-bbq-red px-6 py-2 font-bold hover:bg-red-700 transition rounded shadow-lg cursor-pointer">
+            Contact
+          </a>
         </div>
       </div>
 
@@ -73,7 +75,7 @@ export default function Navbar() {
           <a href="/catering" className="bg-bbq-red px-6 py-3 font-bold text-center rounded mt-2">
             Catering
           </a>
-          <a href="#contact" className="bg-bbq-red px-6 py-3 font-bold text-center rounded mt-2">
+          <a href="/#contact" className="bg-bbq-red px-6 py-3 font-bold text-center rounded mt-2">
             Contact
           </a>
         </div>

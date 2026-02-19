@@ -30,9 +30,9 @@ export default function MenuCarousel({ items }: { items: MenuItem[] }) {
                 className="w-full h-full bg-cover bg-center group-hover:scale-110 transition duration-500"
                 style={{ backgroundImage: `url('${item.img}')` }}
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                 <span className="text-white font-display font-bold text-xl border-2 border-white px-6 py-2">VIEW ITEM</span>
-              </div>
+              </div> */}
             </div>
             <h3 className="font-display text-xl font-bold text-bbq-red">{item.title}</h3>
             <p className="text-gray-600 text-sm">{item.desc}</p>

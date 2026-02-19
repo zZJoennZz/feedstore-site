@@ -27,29 +27,29 @@ export default function Home() {
     },
   ];
 
-  const events = [
-    {
-      date: 'FEB 9',
-      tag: 'LIVE',
-      title: 'BBQ Cook-off',
-      desc: 'Watch local pitmasters compete for the best brisket in Texas.',
-      img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop',
-    },
-    {
-      date: 'FEB 10',
-      tag: 'FAMILY',
-      title: 'Family BBQ Day',
-      desc: 'Kids eat free! Live music and games for the whole family.',
-      img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop',
-    },
-    {
-      date: 'FEB 11',
-      tag: 'MUSIC',
-      title: 'Live Music Night',
-      desc: 'Local country and blues artists perform under the stars.',
-      img: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=600&h=400&fit=crop',
-    },
-  ];
+  // const events = [
+  //   {
+  //     date: 'FEB 9',
+  //     tag: 'LIVE',
+  //     title: 'BBQ Cook-off',
+  //     desc: 'Watch local pitmasters compete for the best brisket in Texas.',
+  //     img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop',
+  //   },
+  //   {
+  //     date: 'FEB 10',
+  //     tag: 'FAMILY',
+  //     title: 'Family BBQ Day',
+  //     desc: 'Kids eat free! Live music and games for the whole family.',
+  //     img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop',
+  //   },
+  //   {
+  //     date: 'FEB 11',
+  //     tag: 'MUSIC',
+  //     title: 'Live Music Night',
+  //     desc: 'Local country and blues artists perform under the stars.',
+  //     img: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=600&h=400&fit=crop',
+  //   },
+  // ];
 
   return (
     <main>
@@ -79,12 +79,18 @@ export default function Home() {
             Authentic Texas barbecue smoked low and slow over hickory wood since 2001
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-bbq-red text-white px-8 py-4 font-display font-bold text-lg rounded hover:bg-red-700 transition shadow-xl">
+            <a
+              href="/menu"
+              className="cursor-pointer bg-bbq-red text-white px-8 py-4 font-display font-bold text-lg rounded hover:bg-red-700 transition shadow-xl"
+            >
               VIEW MENU
-            </button>
-            <button className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 font-display font-bold text-lg rounded hover:bg-white hover:text-bbq-dark transition shadow-xl">
+            </a>
+            <a
+              href="/about-us"
+              className="cursor-pointer bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 font-display font-bold text-lg rounded hover:bg-white hover:text-bbq-dark transition shadow-xl"
+            >
               OUR STORY
-            </button>
+            </a>
           </div>
         </div>
 
@@ -203,9 +209,12 @@ export default function Home() {
               <h2 className="font-display text-6xl font-bold text-bbq-dark">MENU</h2>
               <div className="h-1 w-24 bg-bbq-red mt-2" />
             </div>
-            <button className="border-2 text-bbq-dark border-bbq-dark px-6 py-2 font-display font-bold hover:bg-bbq-dark hover:text-white transition rounded">
+            <a
+              href="/menu"
+              className="cursor-pointer border-2 text-bbq-dark border-bbq-dark px-6 py-2 font-display font-bold hover:bg-bbq-dark hover:text-white transition rounded"
+            >
               VIEW FULL MENU
-            </button>
+            </a>
           </div>
 
           <MenuCarousel items={menuItems} />

@@ -20,7 +20,7 @@ export default function CateringPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('img/Feedstore2.jpg')",
+            backgroundImage: "url('../img/Feedstore2.jpg')",
           }}
         />
         <div className="relative z-20 text-center text-white px-4 pt-20">

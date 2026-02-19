@@ -7,7 +7,7 @@ import Image from 'next/image';
 // Add this export for the page title
 export const metadata: Metadata = {
   title: 'About Feedstore BBQ | A Southlake, TX Original Since 2001',
-  description: `Feedstore BBQ is Southlake’s oldest retail establishment as far as we can find. We've only been selling BBQ out of there since April 2001, but the Bailey family originally opened the Bailey Feed Store here in the late 1950's.`,
+  description: `Feedstore BBQ is Southlake's oldest retail establishment as far as we can find. We've only been selling BBQ out of there since April 2001, but the Bailey family originally opened the Bailey Feed Store here in the late 1950's.`,
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('img/FeedStore_Hero_Image.jpg')",
+            backgroundImage: "url('../img/FeedStore_Hero_Image.jpg')",
           }}
         />
         <div className="relative z-20 text-center text-white px-4 pt-20">
