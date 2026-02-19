@@ -42,13 +42,13 @@ export default function MenuCarousel({ items }: { items: MenuItem[] }) {
 
       <button
         onClick={() => scroll('left')}
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 p-3 rounded-full shadow-lg hover:bg-bbq-red hover:text-white transition z-10 hidden md:block"
+        className="ml-1 cursor-pointer absolute left-0 top-1/2 text-bbq-red -translate-y-1/2 bg-white/90 px-3 py-2 rounded-full shadow-lg hover:bg-bbq-red hover:text-white transition z-10 hidden md:block"
       >
         ←
       </button>
       <button
         onClick={() => scroll('right')}
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 p-3 rounded-full shadow-lg hover:bg-bbq-red hover:text-white transition z-10 hidden md:block"
+        className="mr-1 cursor-pointer absolute right-0 top-1/2 text-bbq-red -translate-y-1/2 bg-white/90 px-3 py-2 rounded-full shadow-lg hover:bg-bbq-red hover:text-white transition z-10 hidden md:block"
       >
         →
       </button>

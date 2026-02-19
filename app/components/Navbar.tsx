@@ -19,9 +19,8 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '#menu', label: 'Our Menu' },
-    { href: '#catering', label: 'Catering Options' },
-    { href: '#events', label: 'Events Calendar' },
-    { href: '#about-us', label: 'About Us' },
+    { href: '/#events', label: 'Events Calendar' },
+    { href: '/about-us', label: 'About Us' },
   ];
 
   return (
@@ -56,8 +55,10 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <button className="bg-bbq-red px-6 py-2 font-bold hover:bg-red-700 transition rounded shadow-lg">Catering</button>
-          <button className="bg-bbq-red px-6 py-2 font-bold hover:bg-red-700 transition rounded shadow-lg">Contact</button>
+          <a href="/catering" className="bg-bbq-red px-6 py-2 font-bold hover:bg-red-700 transition rounded shadow-lg cursor-pointer">
+            Catering
+          </a>
+          <a className="bg-bbq-red px-6 py-2 font-bold hover:bg-red-700 transition rounded shadow-lg cursor-pointer">Contact</a>
         </div>
       </div>
 
@@ -69,7 +70,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <button className="bg-bbq-red px-6 py-3 font-bold text-center rounded mt-2">ORDER NOW</button>
+          <a href="/catering" className="bg-bbq-red px-6 py-3 font-bold text-center rounded mt-2">
+            Catering
+          </a>
+          <a href="#contact" className="bg-bbq-red px-6 py-3 font-bold text-center rounded mt-2">
+            Contact
+          </a>
         </div>
       </div>
     </nav>

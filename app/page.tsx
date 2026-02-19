@@ -6,24 +6,24 @@ import Image from 'next/image';
 export default function Home() {
   const menuItems = [
     {
-      title: 'LITE PLATE',
-      desc: 'Perfect portion for lighter appetites',
-      img: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&h=450&fit=crop',
+      title: 'LUNCH SPECIAL',
+      desc: '[Monday - Friday, 11AM - 3PM] $12.00 Chopped Brisket Sandwith [wet or dry] or Pulled Pork Sandwich [with 2 sides]',
+      img: 'img/lunch_special.jpg',
     },
     {
-      title: 'SANDWICHES',
-      desc: 'Handheld BBQ perfection',
-      img: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=450&fit=crop',
+      title: 'BURNT ENDS PLATE',
+      desc: '[Served Mondays and Saturdays only] $23.50 Comes with 2 sides and hot rolls',
+      img: 'img/burnt_ends_plate.jpg',
     },
     {
-      title: 'BIG BOWL SALADS',
-      desc: 'Fresh and hearty options',
-      img: 'https://images.unsplash.com/photo-1547496502-ffa5ef9c94cd?w=600&h=450&fit=crop',
+      title: 'CHICKEN FRIED STEAK',
+      desc: '[Served Tue, Thur] $18.50 Comes with 2 sides and hot rolls',
+      img: 'img/chicken_fried_steak.jpg',
     },
     {
-      title: 'MEAT PLATES',
-      desc: 'The full BBQ experience',
-      img: 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=600&h=450&fit=crop',
+      title: 'BY THE POUND',
+      desc: '[Price Varies] Get your favorite choices of meat by the pound!',
+      img: 'img/by_the_pound.jpg',
     },
   ];
 
@@ -63,7 +63,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/img/meat-bbq.jpg')",
+            backgroundImage: "url('/img/FeedStore_Hero_Image.jpg')",
           }}
         />
 
@@ -134,7 +134,7 @@ export default function Home() {
               <div
                 className="w-full h-full bg-cover bg-center rounded-lg shadow-2xl sepia"
                 style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop')",
+                  backgroundImage: "url('img/FeedStore_Front_Store.jpg')",
                 }}
               />
             </div>
@@ -158,17 +158,17 @@ export default function Home() {
               {
                 title: 'LOCALLY LOVED SINCE 2001',
                 desc: 'A Southlake staple where neighbors become friends over great barbecue.',
-                img: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop',
+                img: 'img/feature_01.jpg',
               },
               {
                 title: 'GOOD FOOD FOR GOOD FRIENDS',
                 desc: 'Share a plate, share a story, share the experience of authentic Texas BBQ.',
-                img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop',
+                img: 'img/feature_02.jpg',
               },
               {
                 title: 'THE PLACE TO MEAT UP',
                 desc: 'Business lunches, family dinners, or just because. The perfect spot to gather.',
-                img: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&h=300&fit=crop',
+                img: 'img/feature_03.jpg',
               },
             ].map((feature, idx) => (
               <div
@@ -188,7 +188,7 @@ export default function Home() {
                 <div className="relative z-10 h-full flex flex-col justify-end p-8">
                   <h3 className="font-display text-2xl font-bold mb-2 text-white">{feature.title}</h3>
                   <p className="text-white/90 text-sm mb-4">{feature.desc}</p>
-                  <button className="text-bbq-orange font-bold hover:text-white transition">JOIN US →</button>
+                  {/* <button className="text-bbq-orange font-bold hover:text-white transition">JOIN US →</button> */}
                 </div>
               </div>
             ))}
@@ -217,10 +217,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center mb-12">
             <h2 className="font-display text-6xl font-bold">EVENTS</h2>
-            <button className="border border-white/30 px-6 py-2 hover:bg-white hover:text-bbq-dark transition font-display rounded">VIEW ALL</button>
+            {/* <button className="border border-white/30 px-6 py-2 hover:bg-white hover:text-bbq-dark transition font-display rounded">VIEW ALL</button> */}
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
             {events.map((event, idx) => (
               <div
                 key={idx}
@@ -243,7 +243,9 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+          <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+          <div className="elfsight-app-5b5e518d-5f67-4ebc-8089-c75122a1193b p-4 rounded-lg" style={{ backgroundColor: '#8B1D16' }}></div>
         </div>
       </section>
 
@@ -270,7 +272,7 @@ export default function Home() {
 
               <div>
                 <h3 className="font-display text-2xl font-bold text-bbq-red mb-2">PHONE</h3>
-                <p className="text-gray-700 text-xl font-bold">+1 (555) 123-4567</p>
+                <p className="text-gray-700 text-xl font-bold">817-488-1445</p>
               </div>
 
               <div className="bg-gray-100 p-6 rounded-lg border border-gray-200">

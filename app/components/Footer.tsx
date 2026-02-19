@@ -50,7 +50,7 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">
             456 BBQ Lane, Dallas TX 75201 USA
             <br />
-            P: +1 (555) 123-4567
+            P: 817-488-1445
             <br />
             E: info@feedstorebbq.com
           </p>
@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Newsletter Form */}
         <div>
           <h4 className="font-display font-bold text-lg mb-4 text-gray-300">STAY SMOKIN'</h4>
-          <div ref={formRef} className="w-full min-h-[200px]" />
+          {/* <div ref={formRef} className="w-full min-h-[200px]" /> */}
         </div>
       </div>
 
