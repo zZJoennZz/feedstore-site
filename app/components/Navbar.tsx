@@ -21,6 +21,7 @@ export default function Navbar() {
     { href: '/menu', label: 'Menu' },
     { href: '/#events', label: 'Events Calendar' },
     { href: '/about-us', label: 'About Us' },
+    { href: '/press', label: 'Press & Awards' },
   ];
 
   return (

@@ -9,6 +9,7 @@ export default function Footer() {
     { href: '/menu', label: 'Menu' },
     { href: '/catering', label: 'Catering' },
     { href: '/about-us', label: 'About Us' },
+    { href: '/press', label: 'Press & Awards' },
   ];
 
   const legalLinks = [
